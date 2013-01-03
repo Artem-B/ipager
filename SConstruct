@@ -30,6 +30,16 @@ ipager_instdir_bin = os.path.join(ipager_instdir,'bin')
 # environment
 ipager_env = Environment(options = ipager_options, ENV = os.environ)
 
+# process env variables
+for K in ['CPPFLAGS', 'CFLAGS', 'CXXFLAGS', 'LDFLAGS', 'CC', 'CXX']:
+  if K in os.environ.keys():
+    dict = ipager_env.ParseFlags(os.environ[K])
+    # These headers are supposed static. Don't check at each build.
+    for i in dict['CPPPATH']:
+      dict['CCFLAGS'].append('-I' + i)
+    dict['CPPPATH'] = []
+    ipager_env.MergeFlags(dict)
+
 ipager_env.Append(
         CPPFLAGS = [ '-Wall' ],
         CPPPATH = [ '/usr/X11R6/include' ],
