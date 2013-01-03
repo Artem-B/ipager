@@ -125,12 +125,14 @@ else:
     else:
         print "yes"
         ipager_env.AppendUnique(
-            CPPPATH = imlib2_env.Dictionary()['CPPPATH'], 
             CCFLAGS = imlib2_env.Dictionary()['CCFLAGS'], 
             LIBPATH = imlib2_env.Dictionary()['LIBPATH'],
             LIBS    = imlib2_env.Dictionary()['LIBS']
-
         )
+        if imlib2_env.Dictionary().has_key('CPPPATH'): 
+            ipager_env.AppendUnique(
+                CPPPATH = imlib2_env.Dictionary()['CPPPATH'], 
+            )
 
 conf.Finish()
 
