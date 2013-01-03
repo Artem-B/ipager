@@ -1,0 +1,4 @@
+*.o
+.scon*
+ipager
+config.log

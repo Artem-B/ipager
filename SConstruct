@@ -7,15 +7,15 @@ SConsignFile()
 ###############################################
 # options
 ipager_optfile = [ 'scons.opts', 'user.opts' ]
-ipager_options = Options(ipager_optfile)
-ipager_options.AddOptions(
-    BoolOption('debug', 'build debug version', 0),
-    BoolOption('debug_events', 'debug xserve events', 0),
+ipager_options = Variables(ipager_optfile)
+ipager_options.AddVariables(
+    BoolVariable('debug', 'build debug version', 0),
+    BoolVariable('debug_events', 'debug xserve events', 0),
 
-    BoolOption('xinerama', 'support xinerama', 0),
+    BoolVariable('xinerama', 'support xinerama', 0),
 
-    PathOption('PREFIX', 'install-path base', '/usr/local'),
-    PathOption('DESTDIR', 'install to $DESTDIR/$PREFIX', '/')
+    PathVariable('PREFIX', 'install-path base', '/usr/local'),
+    PathVariable('DESTDIR', 'install to $DESTDIR/$PREFIX', '/')
 )
 
 
