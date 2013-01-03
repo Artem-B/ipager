@@ -1,0 +1,51 @@
+IPager - README
+==============
+Suhanov Vadim <suhanov_vadim at mail dor org>
+v1.0, 03 Jun 2005
+
+About
+-----
+'ipager' is a simple pager.
+
+
+
+Installation
+------------
+To install / compile 'ipager' you need 'scons':
+
+* link:http://www.scons.org
+
+It's a clever buildsystem which i prefer over make/autotools. Be sure you
+grab the latest (0.96.90) version installed to avoid problems at install-time.
+After installing 'scons' you just type:
+
+    $> scons
+
+and it should build your personal version of 'ipager'.
+You can influence the build-process by some variables, check
+
+    $> scons -h
+
+To install it finally to your system use:
+
+    $> scons install
+
+and thats it.
+
+
+Usage
+-----
+After a very first launch IPager creates a default config 
+file $HOME/.ipager/ipager.conf
+You can define other config file via '-c' command line option.
+
+
+    $> ipager
+    $> ipager -c /path/to/config/file/other.config
+
+
+Some additional themes (config files) you may find in the 'themes' directory
+of its distrib.
+
+
+

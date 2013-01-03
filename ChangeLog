@@ -1,0 +1,273 @@
+Changes for 1.1.0
+
+2005-11-06:
+
+    * Fixed startup bug.
+    (Vadim)
+
+
+2005-08-11:
+
+  * fixed some problems on freebsd.
+    (Mathias)
+  
+  
+2005-06-10:
+
+  * Fixed bug with removing window from stack. This bug does not influence on 
+    windows displaing in IPager window.
+    (Vadim)
+
+
+2005-06-08:
+
+  * Themes: two new amazing themes 'indastrial' and 'atlantis' have been added.
+    (Shashkin Konstantin <mit3z [at] archlinux [dot] ru>)
+
+  * ipager.conf: new options added.
+  
+        mouse.scroll.up:    [ nextWorkspace | prevWorkspace ]
+	    mouse.scroll.down:  [ nextWorkspace | prevWorkspace ]
+
+
+
+2005-06-06:
+
+  * Release 1.0!
+
+  * Themes: 'light_orange' theme has been added.
+    (Vadim)
+
+  * Themes: 'dark_red' theme has been updated.
+    (Shashkin Konstantin <mit3z [at] archlinux [dot] ru>)
+
+  * MIT Licence has been included in all source files.
+    (Vadim)
+
+
+2005-06-04:
+
+  * ipager.conf: now option 'display_window_icon' can accept a new value 'mouseOver'.
+    This value leads IPager to show window icon only for window under mouse cursor
+    when cursor is over IPager window.
+    (Vadim)
+
+  * Fluxbox doesn't  send the _BLACKBOX_NOTIFY_WINDOW_ADD event
+    if a new window is Stucked.
+    Added code that allows for this Fluxbox behaviour.
+    (Vadim)
+
+  * A more adequate transparency for a workspace icon without defined background color.
+    (Vadim)
+
+
+2005-06-03:
+
+  * ipager.conf: options 'zoom.recreate_icon_delta' now has default value '0'.
+    (Vadim)
+
+  * SConstruct: added 'install' target.
+    (Vadim)
+
+  * Added README and LICENCE (MIT) files.
+    (Vadim)
+
+  * Added support for XUrgencyHint.
+    Workspace with a such window is blinking.
+    (Vadim)
+
+
+2005-06-02:
+
+  * Themes: green and light_gray themes have been updated.
+    Now they correspond to changed config options.
+    (Shashkin Konstantin <mit3z [at] archlinux [dot] ru>)
+
+  * Added _NET check for changing workspace number.
+    (Vadim)
+
+  * Fixed: IPager doesnot update its background after IPager window been moved.
+    (Vadim)
+
+  * Fixed crash after a new workspace is been added.
+    (Vadim)
+
+
+2005-06-01:
+
+  * Added a new feature: displaying a window icon onto an appropriate scaled window
+        in the ipager workspace icon.
+        (Vadim)
+
+  * ipager.conf: added option 'display_window_icon'
+        This option turns on/off displaying windows icons
+        (Vadim)
+
+
+Changes for 0.4.7
+2005-05-31:
+
+  * Default Ipager window position is been set to x=0 and y=0.
+    (Mathias)
+
+
+  * Sets default zooming type to 'over'. Previous type was 'zoomAndExpand'.
+    (Vadim)
+
+  * ipager.conf: cleaning configuration options.
+    (Vadim)
+
+      window.x   -> ipager.window.x
+      window.y   -> ipager.window.y
+
+      ipager.window.background  ->  ipager.background.color
+      ipager.window.image       ->  ipager.background.image
+      ipager.window.border      ->  ipager.border.color
+
+
+      active_workspace.lines    -> [ removed ]
+      workspace.lines           -> [ removed ]
+
+
+      workspace.background        ->  workspace.background.color
+      workspace.border            ->  workspace.border.color
+      active_workspace.background -> active_workspace.background.color
+      active_workspace.border     -> active_workspace.border.color
+
+      window.color                ->  window.background.color
+      window.border_color         ->  window.border.color
+      active_window.color         ->  active_window.background.color
+      active_window.border_color  ->  active_window.border.color
+
+      windows.fill_with_color     -> [ removed ]
+      transparent_workspace_icons -> [ removed ]
+
+      workspace_number_color      -> workspace_number.color
+
+
+
+  * New feature.
+    IPager now can send window from one workspace to another.
+    To send a window one should press a mouse button over a window in the IPager worspace icon.
+    Selected window is been marked with a 'selection_color' border.
+    And then move mouse pointer to the another workspace icon.
+    When one releases a mouse button over another workspace the selected window is
+    been send to that workspace.
+    (Vadim)
+
+  * New config option: selection_color
+
+
+  * Next colors are undefined now by default.
+      active_workspace.background
+      active_workspace.border
+      workspace.background
+      workspace.border
+
+    If a border color is undefined then appropriate border lines  are not drawn.
+    If background color is undefined then a workspace icon is transparent
+    to the background.
+    (Vadim)
+
+
+
+2005-05-30:
+
+  * SConstruct: added check for some 'sys/*' headers and
+                added import 'sys' module for 'exit()' function.
+                (Vadim)
+
+  * New config options:
+        (Vadim)
+
+      -  transparent_workspace_icons:  [ yes | no ]
+            turns workspace icon transparency on/off.
+            Default is 'no'.
+
+
+
+2005-05-29:
+
+  * New config options:
+        (Vadim)
+
+      -  ipager.window.border:     #FFFFFF
+            A color of IPager window border.
+            There is no border if the color undefined.
+
+      -  ipager.window.background: #FFFFFF
+            A color of IPager window background.
+            The window is transparent if the color undefined.
+
+      -  ipager.window.image:      /path/to/pic/01.jpg
+            A background image.
+
+      -  display_workspace_number: [ yes | no ]
+            draws a workspace number on appropriate icon.
+
+      -  workspace_number_color:   #RRGGBB
+            defines a color of workspace number
+
+      -  ttf_font_path: /usr/share/fonts/TTF
+            path to directory with True Type fonts
+
+      -  ttf_font: Vera/14
+            Font name / font size
+            This font is used to display info on IPager window
+
+
+
+
+2005-05-27:
+
+  * Fixed: Atoms::blackboxStructureMessages() return wrong atom.
+      (Vadim)
+
+  * SConstruct: added more options + checks for libs.
+      (Mathias)
+
+  * A lot of code enhancement.
+      (Mathias)
+
+  * Xinerama:
+      added code to check for xinerama and extend the iconsize by the nr of
+      found xineramascreens.
+      (Mathias)
+
+  * Added new option to config file 'zoom.type'. It allows to define a type
+    of an workspace icon zooming.
+    Now it accepts values:
+      [ zoomAndExpand | over ]
+    Default is 'zoomAndExpand'.
+      (Vadim)
+
+  * Added a new type of workspace's icon zooming:
+      the currently hovered workspace icon will be painted last
+      and cover its neighbours...
+      (Mathias)
+
+
+Changes for 0.4.6
+2005-05-26:
+
+  * Added changing IPager workspace ID to -1. Cause KDE ignores _NET_WM_STATE_STICKY
+    window property for windows with defined workspace ID.
+
+  * Change workspace switching method from sending _BLACKBOX_CHANGE_WORKSPACE
+    client message to sending _NET_CURRENT_DESKTOP message.
+    http://standards.freedesktop.org/wm-spec/wm-spec-latest.html#id2506279
+
+  * Added a new themes from Shashkin Konstantin (mit3z [at] archlinux [dot] ru)
+
+  * Added command line options '-c' and '-h'.
+    '-c' options allows to define a config file.
+        Example:
+            ipager -c ~/.ipager/light_gray.conf
+
+    '-h' shows a help.
+
+  * ChangeLog has been created.
+
+
+
+

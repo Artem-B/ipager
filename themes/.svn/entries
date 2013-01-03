@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="39"
+   name=""
+   committed-date="2005-06-08T15:25:24.542825Z"
+   url="svn://svn.useperl.ru/ipager/themes"
+   last-author="vad"
+   kind="dir"
+   uuid="fa8852df-04f8-0310-832a-dfe7f989366c"
+   revision="41"/>
+<entry
+   committed-rev="33"
+   name="dark_red.conf"
+   text-time="2005-06-06T16:58:31.000000Z"
+   committed-date="2005-06-06T08:04:25.869377Z"
+   checksum="f6128cf45bf1ecc3b147b0de741c2176"
+   last-author="vad"
+   kind="file"
+   prop-time="2005-06-06T16:58:31.000000Z"/>
+<entry
+   committed-rev="39"
+   name="industrial.conf"
+   text-time="2005-06-08T17:44:14.000000Z"
+   committed-date="2005-06-08T15:25:24.542825Z"
+   checksum="60fa1101a76a5f59ab209e1ed3903672"
+   last-author="vad"
+   kind="file"/>
+<entry
+   committed-rev="39"
+   name="atlantis.conf"
+   text-time="2005-06-08T17:44:06.000000Z"
+   committed-date="2005-06-08T15:25:24.542825Z"
+   checksum="af2351e7f0fdeef84fdd0d8398755e91"
+   last-author="vad"
+   kind="file"/>
+<entry
+   committed-rev="19"
+   name="green.conf"
+   text-time="2005-06-02T19:49:16.000000Z"
+   committed-date="2005-06-02T17:24:40.583677Z"
+   checksum="1af1d17b683d4d4e0a552d8a83af27c3"
+   last-author="vad"
+   kind="file"
+   prop-time="2005-05-26T19:47:13.000000Z"/>
+<entry
+   committed-rev="35"
+   name="light_orange.conf"
+   text-time="2005-06-06T17:10:03.000000Z"
+   committed-date="2005-06-06T14:47:20.211141Z"
+   checksum="0038531208506173cae5c6428d387910"
+   last-author="vad"
+   kind="file"/>
+<entry
+   committed-rev="19"
+   name="light_gray.conf"
+   text-time="2005-06-02T19:47:13.000000Z"
+   committed-date="2005-06-02T17:24:40.583677Z"
+   checksum="835261a119ef8f699f8ac50828a91056"
+   last-author="vad"
+   kind="file"
+   prop-time="2005-05-26T19:47:14.000000Z"/>
+</wc-entries>

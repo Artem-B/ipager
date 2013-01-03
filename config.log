@@ -1,0 +1,16 @@
+
+file /usr/lib/scons/SCons/Environment.py,line 1019:
+	Configure( confdir = .sconf_temp )
+
+Checking for C header file sys/time.h... scons: `.sconf_temp/conftest_0.c' is up to date.
+scons: `.sconf_temp/conftest_0.o' is up to date.
+yes
+Checking for C header file sys/stat.h... scons: `.sconf_temp/conftest_1.c' is up to date.
+scons: `.sconf_temp/conftest_1.o' is up to date.
+yes
+Checking for C header file sys/types.h... scons: `.sconf_temp/conftest_2.c' is up to date.
+scons: `.sconf_temp/conftest_2.o' is up to date.
+yes
+Checking for XOpenDisplay(0) in C library X11... scons: `.sconf_temp/conftest_3.c' is up to date.
+scons: `.sconf_temp/conftest_3' is up to date.
+yes
