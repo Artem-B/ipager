@@ -27,7 +27,7 @@
 
 #include <time.h>
 #include "atoms.h"
-
+#include <stdlib.h>
 
 WM * WM::m_instance = 0;
 bool WM::x_error = false;
