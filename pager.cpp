@@ -295,7 +295,8 @@ void Pager::run(){
              imlib_context_set_blend(1);
              imlib_context_set_image(m_buffer_icons);
              /* render the image at 0, 0 */
-             imlib_render_image_on_drawable(up_x, up_y);
+             if (m_buffer_icons)
+               imlib_render_image_on_drawable(up_x, up_y);
 
           }
          /* if we had updates - free them */
