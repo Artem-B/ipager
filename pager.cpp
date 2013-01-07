@@ -945,7 +945,8 @@ void Pager::createIcon(int workspace_id, Position &p){
         image = imlib_create_image(p.width, p.height);
 
     imlib_context_set_image(image);
-    imlib_image_set_has_alpha(1);
+    if (image)
+      imlib_image_set_has_alpha(1);
 
     // draw background
     imlib_context_set_color(bgcolor.red, bgcolor.green, bgcolor.blue,
